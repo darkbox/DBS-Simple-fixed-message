@@ -53,24 +53,22 @@ function dbs_sfm_insert_fixed_message() {
   $message = get_option('dbs_sfm_option_message');
   if ($show == '1') { ?>
   <style media="screen">
-    #dbs_fixed_message {
-      background-color: black;
-      background-color: rgba(0,0,0,0.9);
-      color: white;
-      display: block;
+      #dbs_fixed_message {
       position: fixed;
       bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
       width: 100%;
+      font-size: 1em;
+      padding: .5em 0;
       text-align: center;
-      padding: 0.5em;
-      font-size: 1.1em;
-      line-height: 1.2em;
+      background: #000;
+      color: #fff;
+      z-index: 99998;
     }
-    #dbs_fixed_message p {margin: 0 0 1em;position: relative;top: 5px;}
   </style>
-  <section id="dbs_fixed_message">
-    <p><?php echo $message ?></p>
-  </section>
+  <p id="dbs_fixed_message"><?php echo $message ?></p>
 <?php } // End if
 }
 
